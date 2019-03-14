@@ -1,28 +1,35 @@
 <%= form_for @sea do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
 
-  <%= f.label :temperature %>
-  <%= f.number_field :temperature %>
+ <p><li>  <%= f.label :name %>
+  <%= f.text_field :name %> </p>
 
-  <%= f.label :bio %>
-  <%= f.text_area :bio %>
+ <p><li>  <%= f.label :temperature %>
+  <%= f.number_field :temperature %> </li></p>
 
-  <%= f.label :image_url %>
-  <%= f.text_field :image_url %>
+ <p><li>  <%= f.label :bio %></p>
+  <%= f.text_area :bio %> </li>
 
-  <%= f.label :mood %>
-  <%= f.text_field :mood %>
+ <p><li>  <%= f.label :image_url %>
+  <%= f.text_field :image_url %> </li></p>
 
-  <%= f.label :favorite_color %>
-  <%= f.text_field :favorite_color %>
+ <p><li>  <%= f.label :mood %>
+  <%= f.text_field :mood %> </li></p>
 
-  <%= f.label :scariest_creature %>
-  <%= f.text_field :scariest_creature %>
+ <p><li>  <%= f.label :favorite_color %>
+  <%= f.text_field :favorite_color %> </li></p>
 
-  <%= f.label :has_mermaids %>
-  <%= f.check_box :has_mermaids %>
+ <p><li>  <%= f.label :scariest_creature %>
+  <%= f.text_field :scariest_creature %> </li></p>
 
-  <%=  f.submit %>
+ <p><li>  <%= f.label :has_mermaids %>
+  <%= f.check_box :has_mermaids %> </li></p>
+
+ <p><li>  <%=  f.submit %> </li></p>
 
   <% end %>
+
+  <button class="btn btn-info" style="margin: 1em"><a href="/seas">Back</a></button>
+  <button class="btn btn-info" style="margin: 1em"><a href="/seas">All Seas</a></button>
+
+
+  <%= button_to "delete", @sea, "method" => "delete" %>
