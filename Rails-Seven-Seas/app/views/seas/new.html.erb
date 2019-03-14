@@ -1,28 +1,21 @@
-<%= form_for @sea do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+<h3>New beach</h3>
+<%= form_tag seas_path do %>
+ <label>Sea Name:</label><br>
+ <%= text_field_tag :'sea[name]' %><br>
+ <label>Sea Temperature:</label><br>
+ <%= number_field_tag :'sea[temperature]' %><br>
+ <label>Sea Bio:</label><br>
+ <%= text_area_tag :'sea[bio]' %><br>
+ <label>Sea image_url:</label><br>
+ <%= text_field_tag :'sea[image_url]' %><br>
+ <label>Sea mood:</label><br>
+ <%= text_field_tag :'sea[mood]' %><br>
+ <label>Sea favorite color:</label><br>
+ <%= text_field_tag :'sea[favorite_color]' %><br>
+ <label>Sea scariest creature:</label><br>
+ <%= text_field_tag :'sea[scariest_creature]' %><br>
+ <label>Sea has mermaids:</label><br>
+ <%= check_box_tag :'sea[has_mermaids]'%><br>
 
-  <%= f.label :temperature %>
-  <%= f.number_field :temperature %>
-
-  <%= f.label :bio %>
-  <%= f.text_area :bio %>
-
-  <%= f.label :image_url %>
-  <%= f.text_field :image_url %>
-
-  <%= f.label :mood %>
-  <%= f.text_field :mood %>
-
-  <%= f.label :favorite_color %>
-  <%= f.text_field :favorite_color %>
-
-  <%= f.label :scariest_creature %>
-  <%= f.text_field :scariest_creature %>
-
-  <%= f.label :has_mermaids %>
-  <%= f.check_box :has_mermaids %>
-
-  <%=  f.submit %>
-
-  <% end %>
+ <%= submit_tag "Submit Post" %>
+<% end %>
