@@ -23,6 +23,11 @@ class SeasController < ApplicationController
     redirect_to :action => "index"
   end
 
+  def destroy
+    Sea.all.find(params[:id]).destroy
+    redirect_to :action => "index"
+  end
+
   # def delete
   #   @sea = Sea.all.find(params[:id])
   #   @sea.delete
